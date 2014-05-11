@@ -1,33 +1,18 @@
-# bloggy-summary
+# bloggy-marked-toc
 
-> A summary generator for blog posts in bloggy, a small and lightweight blog engine for node.js.
+> A table of contents (TOC) generator for blog posts in bloggy, a small and lightweight blog engine for node.js.
 
 ## Quickstart
 
-That's everything you need. Just call the `engine.extendWith()` function of the bloggy engine. But please ensure to register bloggy-summary with `extendWith()` __after__ you've registerd a rendering engine like `bloggy-marked`.
+That's everything you need. Just call the `engine.extendWith()` function of the bloggy engine. This plugin is powered by [marked-toc](https://github.com/jonschlinkert/marked-toc).
 
 ```Javascript
 var engine = require('bloggy')();
 
-engine.extendWith(require('bloggy-summary'));
+engine.extendWith(require('bloggy-marked-toc'));
 ```
 
-## Additional options
-
-You're able to change the following settings.
-
-```Javascript
-var engine = require('bloggy')(),
-    bloggySummary = require('bloggy-summary');
-
-// Shown values are the default values
-bloggySummary.maxLength = 300;       // The maximum number of characters for the html-encoded, text-only summary snippet.
-bloggySummary.prefix = '<p>';        // Prepends some text or unencoded strings
-bloggySummary.suffix = ' ...<p>';    // Appends some text or unencoded strings
-
-engine.extendWith(bloggySummary);
-
-```
+After the content of a blog entry is loaded by the engine, it has a property `toc`, which contains the table of contents as an object. The structure of this object is documented [here](https://github.com/jonschlinkert/marked-toc#tocraw).
 
 License
 -------
