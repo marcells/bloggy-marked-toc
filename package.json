@@ -10,7 +10,7 @@
     }
   ],
   "dependencies": {
-    "marked-toc": "^0.2.5"
+    "markdown-toc": "^1.1.0"
   },
   "keywords": [
     "blog",
@@ -20,7 +20,7 @@
     "lightweight",
     "marked"
   ],
-  "repository": "git://github.com/marcells/bloggy-summary",
+  "repository": "git://github.com/marcells/bloggy-marked-toc",
   "engines": {
     "node": ">= 0.8.0"
   },

@@ -12,7 +12,7 @@ var engine = require('bloggy')();
 engine.extendWith(require('bloggy-marked-toc'));
 ```
 
-After the content of a blog entry is loaded by the engine, it has a property `toc`, which contains the table of contents as an object. The structure of this object is documented [here](https://github.com/jonschlinkert/marked-toc#tocraw).
+After the content of a blog entry is loaded by the engine, it has a property `toc`, which contains the table of contents.
 
 License
 -------
